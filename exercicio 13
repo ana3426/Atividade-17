@@ -1,0 +1,23 @@
+// Exercicio13.java
+// Mistura em Tanque (Tempo Mínimo)
+// Indústria 4.0: instrumentação e timers integrados ao PLC/SCADA.
+import java.util.Scanner;
+
+public class Exercicio13 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int minutos;
+        do {
+            System.out.print("Tempo de mistura (min): ");
+            minutos = sc.nextInt();
+        } while (minutos < 10);
+        System.out.print("Confirmar encerramento? (S/N): ");
+        String resp = sc.next().trim().toUpperCase();
+        if (resp.equals("S")) {
+            System.out.println("Mistura encerrada aos " + minutos + " minutos");
+        } else {
+            System.out.println("Processo continua");
+        }
+        sc.close();
+    }
+}
