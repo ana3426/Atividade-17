@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class MenuMES {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int opcao; 
+        do {
+            System.out.println("1. Registrar parada");
+            System.out.println("2. Registrar produção");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+            while (!scanner.hasNextInt()) { 
+                System.out.print("Entrada inválida. Digite um número (1-3): ");
+                sc.next(); 
+            }
+            opcao = sc.nextInt();
+            switch (opcao) {
+                case 1:
+                    System.out.println("Parada registrada.
+");
+                    break;
+                case 2:
+                    System.out.println("Produção registrada.
+");
+                    break;
+                case 3:
+                    System.out.println("Encerrando menu...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Digite 1, 2 ou 3.
+");
+          }
+        } while (opcao != 3); // Repete enquanto a opção não for 3
+
+        sc.close(); 
+    }
+}
