@@ -1,0 +1,19 @@
+// Exercicio09.java
+// Reprocesso de Peça (true/false)
+// Indústria 4.0: registro de retrabalho pode alimentar MES e IA para reduzir retrabalho.
+import java.util.Scanner;
+
+public class Exercicio09 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        boolean ok;
+        int tentativas = 0;
+        do {
+            System.out.print("Teste passou? (true/false): ");
+            ok = sc.nextBoolean();
+            tentativas++;
+        } while (!ok);
+        System.out.println("Tentativas: " + tentativas);
+        sc.close();
+    }
+}
