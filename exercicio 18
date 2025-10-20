@@ -1,0 +1,24 @@
+// Exercicio18.java
+// Balanceamento de Linha (Takt Time)
+// Indústria 4.0: tempos por estação coletados e analisados via MES para balanceamento.
+import java.util.Scanner;
+
+public class Exercicio18 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Takt (segundos): ");
+        double takt = sc.nextDouble();
+        double soma = 0;
+        int estacoes = 0;
+        double tempo;
+        do {
+            System.out.print("Tempo da estação (seg): ");
+            tempo = sc.nextDouble();
+            soma += tempo;
+            estacoes++;
+        } while ((soma / estacoes) > takt); // continua até média ≤ takt
+        double media = soma / estacoes;
+        System.out.println("Média: " + media + " | Estações: " + estacoes);
+        sc.close();
+    }
+}
