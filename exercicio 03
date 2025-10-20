@@ -1,0 +1,17 @@
+// Exercicio03.java
+// Validação de Código RFID
+// Indústria 4.0: RFID usado para rastreabilidade; dados integrados a WMS/MES.
+import java.util.Scanner;
+
+public class Exercicio03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String codigo;
+        do {
+            System.out.print("Informe o código RFID: ");
+            codigo = sc.nextLine().trim();
+        } while (codigo.length() != 8);
+        System.out.println("Código aceito");
+        sc.close();
+    }
+}
