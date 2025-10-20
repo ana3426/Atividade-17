@@ -1,0 +1,23 @@
+// Exercicio08.java
+// Simulação de AGV (Autonomous Guided Vehicle)
+// Indústria 4.0: AGV = veículo autônomo conectado via IIoT para logística interna.
+
+import java.util.Scanner;
+
+public class Exercicio08 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final int META = 50;
+        int soma = 0;
+        int viagens = 0;
+        int caixas;
+        do {
+            System.out.print("Caixas entregues na viagem: ");
+            caixas = sc.nextInt();
+            soma += caixas;
+            viagens++;
+        } while (soma < META);
+        System.out.println("Viagens: " + viagens + " | Caixas: " + soma);
+        sc.close();
+    }
+}
