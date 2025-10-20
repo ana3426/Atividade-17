@@ -1,0 +1,17 @@
+// Exercicio11.java
+// Controle de Umidade (Estoque de Matéria-prima)
+// Indústria 4.0: sensores de umidade (IoT) enviam leituras para controle de qualidade.
+import java.util.Scanner;
+
+public class Exercicio11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int umid;
+        do {
+            System.out.print("Informe a umidade (%): ");
+            umid = sc.nextInt();
+        } while (umid < 30 || umid > 55);
+        System.out.println("Umidade aceita: " + umid + "%");
+        sc.close();
+    }
+}
