@@ -1,0 +1,22 @@
+// Exercicio02.java
+// Produção de Peças até Meta (Célula CNC)
+// Indústria 4.0: CNC integrado via IIoT ao MES para contabilizar produção.
+import java.util.Scanner;
+
+public class Exercicio02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final int META = 120;
+        int soma = 0;
+        int ciclos = 0;
+        int produzido;
+        do {
+            System.out.print("Peças produzidas no ciclo: ");
+            produzido = sc.nextInt();
+            soma += produzido;
+            ciclos++;
+        } while (soma < META);
+        System.out.println("Ciclos: " + ciclos + " | Total: " + soma);
+        sc.close();
+    }
+}
