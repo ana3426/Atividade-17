@@ -1,0 +1,25 @@
+// Exercicio16.java
+// Controle de Qualidade por Amostra (10 amostras)
+// Indústria 4.0: amostragens integradas ao MES para rastreabilidade e análise.
+import java.util.Scanner;
+
+public class Exercicio16 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int aprov = 0, reprov = 0;
+        int i = 0;
+        do {
+            System.out.print("Resultado (A/R): ");
+            String r = sc.nextLine().trim().toUpperCase();
+            if (r.equals("A")) aprov++;
+            else if (r.equals("R")) reprov++;
+            else {
+                System.out.println("Entrada inválida, repita.");
+                continue; 
+            }
+            i++;
+        } while (i < 10);
+        System.out.println("A: " + aprov + " | R: " + reprov);
+        sc.close();
+    }
+}
