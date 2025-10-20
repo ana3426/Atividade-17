@@ -1,0 +1,24 @@
+// Exercicio14.java
+// Leitura de Códigos de Defeito
+// Indústria 4.0: registros alimentam sistema de qualidade, análise por Big Data/IA.
+import java.util.Scanner;
+import java.util.HashMap;
+
+public class Exercicio14 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String, Integer> cont = new HashMap<>();
+        String codigo;
+        do {
+            System.out.print("Código de defeito (FIM encerra): ");
+            codigo = sc.nextLine().trim().toUpperCase();
+            if (codigo.equals("FIM")) {
+                cont.put(codigo, cont.getOrDefault(codigo, 0) + 1);
+            }
+        } while (codigo.equals("FIM"));
+        for (String key : cont.keySet()) {
+            System.out.println(key + ": " + cont.get(key));
+        }
+        sc.close();
+    }
+}
