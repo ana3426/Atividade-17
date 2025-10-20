@@ -1,0 +1,17 @@
+// Exercicio01.java
+// Leitura de Sensores de Temperatura (Forno Industrial)
+// Comentário Indústria 4.0: sensor = IoT/IIoT; dado poderia ir para SCADA/MES/Digital Twin.
+import java.util.Scanner;
+
+public class Exercicio01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int temp;
+        do {
+            System.out.print("Informe a temperatura do forno (°C): ");
+            temp = sc.nextInt();
+        } while (temp < 800 || temp > 1200);
+        System.out.println("Temperatura válida: " + temp);
+        sc.close();
+    }
+}
