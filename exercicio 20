@@ -1,0 +1,21 @@
+// Exercicio20.java
+// Inventário Cíclico (AS/RS)
+// Indústria 4.0: AS/RS (sistemas automáticos) integrados ao WMS/MES.
+import java.util.Scanner;
+
+public class Exercicio20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Total de prateleiras a validar: ");
+        int totalPrateleiras = sc.nextInt();
+        int validadas = 0;
+        int num;
+        do {
+            System.out.print("Digite prateleira validada (qualquer número): ");
+            num = sc.nextInt();
+            validadas++;
+        } while (validadas < totalPrateleiras);
+        System.out.println("Inventário concluído");
+        sc.close();
+    }
+}
