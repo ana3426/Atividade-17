@@ -1,0 +1,22 @@
+// Exercicio17.java
+// Monitor de Vibração (3 leituras consecutivas < 2.5)
+// Indústria 4.0: vibração monitora condição de máquinas para manutenção preditiva (IA/ML).
+import java.util.Scanner;
+
+public class Exercicio17 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int consecutivas = 0;
+        int total = 0;
+        double valor;
+        do {
+            System.out.print("Leitura RMS de vibração: ");
+            valor = sc.nextDouble();
+            total++;
+            if (valor < 2.5) consecutivas++;
+            else consecutivas = 0;
+        } while (consecutivas < 3);
+        System.out.println("Leituras totais: " + total);
+        sc.close();
+    }
+}
