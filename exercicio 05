@@ -1,0 +1,21 @@
+// Exercicio05.java
+// Indústria 4.0: impressoras 3D conectadas via IoT reportam pesos ao MES/SCADA.
+import java.util.Scanner;
+
+public class Exercicio05 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final int LIMITE = 500;
+        int soma = 0;
+        int count = 0;
+        int peso;
+        do {
+            System.out.print("Peso da peça (g): ");
+            peso = sc.nextInt();
+            soma += peso;
+            count++;
+        } while (soma < LIMITE);
+        System.out.println("Peças: " + count + " | Peso total: " + soma + " g");
+        sc.close();
+    }
+}
