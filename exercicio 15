@@ -1,0 +1,17 @@
+// Exercicio15.java
+// Calibração de Sensor (Faixa 4.0 - 20.0 mA)
+// Indústria 4.0: calibração documentada e monitorada via MES/SCADA.
+import java.util.Scanner;
+
+public class Exercicio15 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double val;
+        do {
+            System.out.print("Medida (mA): ");
+            val = sc.nextDouble();
+        } while (val < 4.0 || val > 20.0);
+        System.out.println("Calibração OK: " + val + " mA");
+        sc.close();
+    }
+}
