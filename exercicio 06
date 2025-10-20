@@ -1,0 +1,19 @@
+// Exercicio06.java
+// Indústria 4.0: resultados podem alimentar IA/ML para análise de qualidade.
+import java.util.Scanner;
+
+public class Exercicio06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String entrada;
+        int aprov = 0, reprov = 0;
+        do {
+            System.out.print("Resultado (A=aprovada, R=reprovada, FIM=encerra): ");
+            entrada = sc.nextLine().trim().toUpperCase();
+            if (entrada.equals("A")) aprov++;
+            else if (entrada.equals("R")) reprov++;
+        } while (!entrada.equals("FIM"));
+        System.out.println("Aprovadas: " + aprov + " | Reprovadas: " + reprov);
+        sc.close();
+    }
+}
