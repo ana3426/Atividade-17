@@ -1,0 +1,22 @@
+// Exercicio10.java
+// OEE Simplificado (Disponibilidade)
+// Indústria 4.0: OEE calculado com dados do MES/SCADA para KPI.
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exercicio10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Informe ciclos válidos (>0): ");
+        int ciclos = sc.nextInt();
+        System.out.print("Informe paradas (>=0): ");
+        int paradas = sc.nextInt();
+        double disponibilidade = 0;
+        if (ciclos + paradas > 0) {
+            disponibilidade = (double) ciclos / (ciclos + paradas);
+        }
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.println("Disponibilidade: " + df.format(disponibilidade));
+        sc.close();
+    }
+}
