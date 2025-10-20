@@ -1,0 +1,29 @@
+// Exercicio19.java
+// Inspeção por Visão Computacional (Taxa de Falhas ≤ 2%)
+// Indústria 4.0: visão computacional integrada via Edge/Cloud para evitar excesso de falhas.
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exercicio19 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int totalPecas = 0;
+        int totalFalhas = 0;
+        DecimalFormat df = new DecimalFormat("0.##");
+        do {
+            System.out.print("Peças no ciclo: ");
+            int pecas = sc.nextInt();
+            System.out.print("Falhas no ciclo: ");
+            int falhas = sc.nextInt();
+            totalPecas += pecas;
+            totalFalhas += falhas;
+            double taxa = (totalPecas > 0) ? ((double) totalFalhas / totalPecas) * 100.0 : 100.0;
+            System.out.println("Taxa atual: " + df.format(taxa) + "%");
+            if (taxa <= 2.0) break;
+            // caso contrário, loop continua solicitando novos ciclos
+        } while (true);
+        double taxaFinal = (totalPecas > 0) ? ((double) totalFalhas / totalPecas) * 100.0 : 0;
+        System.out.println("Taxa final: " + df.format(taxaFinal) + "%");
+        sc.close();
+    }
+}
