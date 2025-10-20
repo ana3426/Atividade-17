@@ -1,0 +1,23 @@
+// Exercicio07.java
+// Indústria 4.0: medidores conectados via IIoT reportam kWh para análise de eficiência.
+import java.util.Scanner;
+
+public class Exercicio07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int consumo;
+        int total = 0;
+        int turnos = 0;
+        do {
+            System.out.print("Consumo do turno (kWh) [0 encerra]: ");
+            consumo = sc.nextInt();
+            if (consumo != 0) {
+                total += consumo;
+                turnos++;
+            }
+        } while (consumo != 0);
+        double media = (turnos > 0) ? ((double) total / turnos) : 0;
+        System.out.println("Total: " + total + " | Média: " + (int)media);
+        sc.close();
+    }
+}
