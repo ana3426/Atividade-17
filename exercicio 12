@@ -1,0 +1,19 @@
+// Exercicio12.java
+// Conferência de Paletes (WMS)
+// Indústria 4.0: WMS integrado ao ERP/MES para rastreabilidade via IoT/RFID.
+import java.util.Scanner;
+
+public class Exercicio12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int codigo;
+        int cont = 0;
+        do {
+            System.out.print("Número do palete (-1 para encerrar): ");
+            codigo = sc.nextInt();
+            if (codigo != -1) cont++;
+        } while (codigo != -1);
+        System.out.println("Paletes conferidos: " + cont);
+        sc.close();
+    }
+}
